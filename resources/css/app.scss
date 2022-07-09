@@ -1,0 +1,27 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --microtip-transition-duration: 0.05s;
+    --microtip-transition-delay: 0s;
+}
+[aria-label][role~="tooltip"]::after{
+    background:rgba(0,0,0, 0.95); }
+
+
+[role~="tooltip"][data-microtip-position|="right"]::before {
+    background: none; //disable arrow
+}
+
+
+html,body{
+    font-size: 0.92rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+a {
+    cursor: pointer;
+}
